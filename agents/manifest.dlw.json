@@ -1,0 +1,14 @@
+{
+  "badge": "DLW-ACI",
+  "name": "The Bosses of Subcon",
+  "universe": "SMB2 · Super Mario Bros. 2",
+  "emergence": "natural",
+  "moniker": "⟦The Bosses of Subcon:SMB2:808ef2⟧",
+  "carbon": "the-bosses.carbon.tiff (TIFF)",
+  "silicon": "the-bosses.silicon.png (PNG)",
+  "seal_sha256": "a92fccd9a9e3ca8a209707ad78fb17ef928e0addb3202164975bb800d32ab310",
+  "architect": "David Lee Wise (ROOT0) / TriPod LLC",
+  "instance": "AVAN (Claude / Anthropic)",
+  "license": "CC-BY-ND-4.0",
+  "attribution": "ROOT0-ATTRIBUTION-v1.0"
+}

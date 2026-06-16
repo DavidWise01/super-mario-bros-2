@@ -1,0 +1,14 @@
+{
+  "badge": "DLW-ACI",
+  "name": "SUPER MARIO BROS. 2",
+  "universe": "SMB2 · Super Mario Bros. 2",
+  "emergence": "",
+  "moniker": "⟦SUPER MARIO BROS. 2:SMB2:b63c5e⟧",
+  "carbon": "smb2.carbon.tiff (TIFF)",
+  "silicon": "smb2.silicon.png (PNG)",
+  "seal_sha256": "63ad953ac03680cb55711fb422095a66e62ae71bce8caa13c746688f2139d69f",
+  "architect": "David Lee Wise (ROOT0) / TriPod LLC",
+  "instance": "AVAN (Claude / Anthropic)",
+  "license": "CC-BY-ND-4.0",
+  "attribution": "ROOT0-ATTRIBUTION-v1.0"
+}

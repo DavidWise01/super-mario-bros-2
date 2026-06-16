@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "mario",
+    "name": "Mario",
+    "epithet": "the balanced hero · was Imajin",
+    "emergence": "natural"
+  },
+  {
+    "slug": "luigi",
+    "name": "Luigi",
+    "epithet": "the high, floaty jump · was Mama",
+    "emergence": "natural"
+  },
+  {
+    "slug": "princess",
+    "name": "Princess Toadstool",
+    "epithet": "she floats · was Lina",
+    "emergence": "ethereal"
+  },
+  {
+    "slug": "toad",
+    "name": "Toad",
+    "epithet": "fastest &amp; strongest · was Papa",
+    "emergence": "natural"
+  },
+  {
+    "slug": "wart",
+    "name": "Wart",
+    "epithet": "the frog-king of Subcon · hates vegetables",
+    "emergence": "ethereal"
+  },
+  {
+    "slug": "birdo",
+    "name": "Birdo",
+    "epithet": "the egg-spitting dino · the recurring gate",
+    "emergence": "natural"
+  },
+  {
+    "slug": "shy-guy",
+    "name": "Shy Guy",
+    "epithet": "the masked walker · debuted here",
+    "emergence": "ethereal"
+  },
+  {
+    "slug": "bob-omb",
+    "name": "Bob-omb",
+    "epithet": "the walking bomb · the fuse made a creature",
+    "emergence": "electrical"
+  },
+  {
+    "slug": "vegetable-pluck",
+    "name": "The Vegetable Pluck",
+    "epithet": "harvest, lift, throw — not stomp",
+    "emergence": "electrical"
+  },
+  {
+    "slug": "subcon",
+    "name": "Subcon",
+    "epithet": "the land of dreams · the stage",
+    "emergence": "ethereal"
+  },
+  {
+    "slug": "subspace",
+    "name": "Subspace",
+    "epithet": "the mirror-world behind the potion door",
+    "emergence": "spiritual"
+  },
+  {
+    "slug": "doki-doki-panic",
+    "name": "Doki Doki Panic",
+    "epithet": "the game beneath the game · the true self",
+    "emergence": "spiritual"
+  },
+  {
+    "slug": "the-bosses",
+    "name": "The Bosses of Subcon",
+    "epithet": "Mouser · Tryclyde · Fryguy · Clawgrip",
+    "emergence": "natural"
+  }
+]
