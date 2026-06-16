@@ -67,32 +67,47 @@ footer a{color:var(--red);text-decoration:none}
   <div class="marquee"><a href="https://davidwise01.github.io/ud0/">◄ UD0 · UNIVERSE DAVID 0</a> &nbsp;·&nbsp; PUSH START &nbsp;·&nbsp; A GAME-WORLD &nbsp;·&nbsp; NES 1988</div>
 
   <header>
-    <div class="titleart"><canvas id="smb2" width="700" height="380" style="width:100%;height:auto;display:block;image-rendering:pixelated"></canvas>
+    <div class="titleart"><canvas id="smb2" width="700" height="440" style="width:100%;height:auto;display:block;image-rendering:pixelated"></canvas>
 <script>
 (function(){
-var cv=document.getElementById('smb2');if(!cv)return;var g=cv.getContext('2d'),W=700,H=380;
-var stars=[];for(var i=0;i<46;i++)stars.push({x:Math.random()*W,y:Math.random()*210,r:Math.random()*1.4+0.5,p:Math.random()*6.28});
+var cv=document.getElementById('smb2');if(!cv)return;var g=cv.getContext('2d'),W=700,H=440;
 function R(x,y,w,h,c){g.fillStyle=c;g.fillRect(x,y,w,h);}
-function shyguy(x,y){R(x+3,y,22,22,'#d23a26');R(x+5,y-15,18,16,'#efe4cf');R(x+8,y-9,4,5,'#3a2a20');R(x+16,y-9,4,5,'#3a2a20');R(x,y+22,8,7,'#d23a26');R(x+20,y+22,8,7,'#d23a26');}
-function birdo(x,y){R(x,y,30,28,'#f06aa8');R(x+6,y-12,16,14,'#f06aa8');R(x+24,y+8,13,9,'#f4ead6');R(x+34,y+9,4,7,'#7a1018');R(x+9,y-18,4,8,'#d23a26');R(x+15,y-18,4,8,'#d23a26');R(x+11,y-18,4,3,'#f4ead6');R(x+2,y+28,9,8,'#f06aa8');R(x+19,y+28,9,8,'#f06aa8');}
-function turnip(x,y){R(x,y,16,15,'#f4ead6');R(x+3,y+15,10,6,'#efe0c8');R(x+4,y-9,3,10,'#3a9a44');R(x+9,y-9,3,10,'#3a9a44');R(x+6,y-12,4,5,'#3a9a44');}
-function door(x,y){R(x-3,y-3,52,76,'#5a3418');R(x,y,46,70,'#8a5a2e');R(x+4,y+4,38,62,'#caa15a');R(x+6,y+6,34,26,'#7a4a22');g.fillStyle='#f0d24a';g.beginPath();g.arc(x+36,y+40,3,0,7);g.fill();}
-function heart(x,y,s){g.fillStyle='#e0405a';g.beginPath();g.arc(x-s*0.5,y,s*0.5,Math.PI,0);g.arc(x+s*0.5,y,s*0.5,Math.PI,0);g.lineTo(x,y+s*1.1);g.closePath();g.fill();}
-function cloud(x,y){g.fillStyle='rgba(244,234,214,.5)';g.beginPath();g.arc(x,y,12,0,7);g.arc(x+14,y,16,0,7);g.arc(x+30,y,12,0,7);g.fill();}
+function C(x,y,r,c){g.fillStyle=c;g.beginPath();g.arc(x,y,r,0,7);g.fill();}
+function cloud(x,y,s){g.fillStyle='#fff';C(x,y,14*s);C(x+15*s,y-7*s,17*s);C(x+33*s,y,15*s);C(x+16*s,y+9*s,18*s);R(x-14*s,y,50*s,12*s,'#fff');}
+function mario(t){
+ var b=Math.sin(t/180)*3,S='#f2b27a',H='#4a2a14',RD='#d3301f',BL='#2a54bc',GL='#fff',SH='#6e3614',BT='#f2c024';
+ function r(x,y,w,h,c){R(x,y+b,w,h,c);}function c(x,y,rr,cc){C(x,y+b,rr,cc);}
+ r(322,300,16,30,BL);R(314,328+b,26,11,SH);
+ r(348,300,15,24,BL);R(348,318+b,26,11,SH);
+ r(316,256,52,46,RD);r(320,272,44,32,BL);
+ r(326,256,8,18,BL);r(350,256,8,18,BL);r(328,266,7,7,BT);r(349,266,7,7,BT);
+ r(310,260,10,10,RD);r(302,268,11,20,S);R(298,284+b,15,12,GL);
+ r(366,256,10,10,RD);r(372,232,11,24,S);R(368,216+b,17,15,GL);
+ r(374,192,15,18,'#f4ead6');R(376,180+b,3,14,'#39a046');R(383,180+b,3,14,'#39a046');R(379,176+b,4,6,'#39a046');
+ r(314,222,8,24,H);r(362,222,8,24,H);
+ r(320,216,44,34,S);
+ c(343,236,8,S);
+ r(330,222,6,8,'#fff');r(348,222,6,8,'#fff');r(332,224,3,5,BL);r(350,224,3,5,BL);
+ r(324,240,38,7,H);r(328,246,8,4,H);r(348,246,8,4,H);
+ r(310,198,60,18,RD);r(316,192,46,8,RD);r(360,202,14,8,RD);
+ c(337,201,7,'#fff');g.fillStyle=RD;g.font='bold 10px Arial';g.textAlign='center';g.fillText('M',337,205+b);
+}
 function frame(t){
-  var sk=g.createLinearGradient(0,0,0,300);sk.addColorStop(0,'#3a2a72');sk.addColorStop(.5,'#b85a5a');sk.addColorStop(1,'#e6b070');g.fillStyle=sk;g.fillRect(0,0,W,300);
-  stars.forEach(function(s){g.globalAlpha=.35+.55*Math.sin(t/520+s.p);g.fillStyle='#fff';g.beginPath();g.arc(s.x,s.y,s.r,0,7);g.fill();});g.globalAlpha=1;
-  cloud(110+Math.sin(t/3000)*10,70);cloud(520+Math.cos(t/3400)*10,52);
-  g.fillStyle='#caa05a';g.beginPath();g.moveTo(0,258);g.quadraticCurveTo(180,222,360,256);g.quadraticCurveTo(540,286,700,252);g.lineTo(700,300);g.lineTo(0,300);g.closePath();g.fill();
-  g.fillStyle='#b3833f';g.beginPath();g.moveTo(0,284);g.quadraticCurveTo(230,260,460,288);g.quadraticCurveTo(610,304,700,286);g.lineTo(700,300);g.lineTo(0,300);g.closePath();g.fill();
-  door(325,150);shyguy(146,228+Math.sin(t/620)*6);birdo(500,224);turnip(272,250+Math.sin(t/430)*5);
-  heart(430,250-((t/16)%118),9);heart(118,250-(((t/16)+59)%118),7);
-  R(0,300,W,80,'#160e1f');
-  g.textAlign='center';
-  g.fillStyle='#efd24a';g.font='900 17px "Arial Black",Impact,sans-serif';g.fillText('SUPER',350,324);
-  g.fillStyle='#e23226';g.font='900 33px "Arial Black",Impact,sans-serif';g.fillText('MARIO BROS. 2',350,357);
-  g.fillStyle='#caa676';g.font='9px monospace';g.fillText('NES · 1988 · the dream of SUBCON · (Doki Doki Panic, reskinned)',350,374);
-  requestAnimationFrame(frame);
+ var sk=g.createLinearGradient(0,0,0,H);sk.addColorStop(0,'#4f9fe0');sk.addColorStop(1,'#9ad2f4');g.fillStyle=sk;g.fillRect(0,0,W,H);
+ cloud(110+Math.sin(t/4000)*14,300,1.4);cloud(560+Math.cos(t/4400)*14,330,1.6);cloud(150+Math.sin(t/5000)*10,150,1);cloud(540,150,.9);
+ g.save();g.translate(340,250);g.rotate(-0.5);['#e23b2e','#f0851e','#f2c024','#39a046','#2a78d0'].forEach(function(col,i){R(-220,-150+i*26,300,18,col);});g.restore();
+ g.globalAlpha=.18;g.fillStyle='#9ad2f4';g.fillRect(0,250,W,90);g.globalAlpha=1;
+ mario(t);
+ g.textAlign='center';
+ g.fillStyle='#3a1810';g.font='900 22px "Arial Black",Impact,sans-serif';g.fillText('SUPER MARIO',352,52);
+ g.fillStyle='#f2c024';g.fillText('SUPER MARIO',350,50);
+ g.fillStyle='#3a1810';g.font='900 13px "Arial Black",Impact,sans-serif';g.fillText('BROS.',250,72);
+ g.fillStyle='#f2c024';g.fillText('BROS.',249,71);
+ g.fillStyle='#3a1810';g.font='900 56px "Arial Black",Impact,sans-serif';g.fillText('2',462,74);
+ g.fillStyle='#d3301f';g.fillText('2',460,72);
+ R(0,392,W,30,'#c42018');g.fillStyle='#fff';g.font='900 17px "Arial Black",Impact,sans-serif';g.fillText('MARIO MADNESS',350,413);
+ R(0,422,W,18,'#111');g.fillStyle='#c9c9c9';g.font='8px monospace';g.fillText('NINTENDO ENTERTAINMENT SYSTEM',350,434);
+ requestAnimationFrame(frame);
 }
 frame(0);
 })();
