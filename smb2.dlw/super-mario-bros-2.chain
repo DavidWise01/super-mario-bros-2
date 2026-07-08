@@ -1,0 +1,9 @@
+ROOT0-DLW-CHAIN-v1
+index : 621
+slug  : super-mario-bros-2
+seal  : 63ad953ac03680cb55711fb422095a66e62ae71bce8caa13c746688f2139d69f
+prev  : 2955dad8dd831e346a747ce1b077d487122449c001ccb22b9699ab065e7da4fb
+link  : 74abff08a812ce476a407a25f39e95dbab2aabd576eba9dce09b57384ccfdf11
+head  : 3447d3a0533aaf1e29a8bdc67a9774884fb3ae9dbc8a17064b7a008ca3c4ec90
+
+— the tether: link = sha256(index|slug|seal|prev). the chain head commits to the whole corpus.
